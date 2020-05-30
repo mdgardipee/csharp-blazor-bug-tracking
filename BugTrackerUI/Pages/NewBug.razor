@@ -1,4 +1,5 @@
 ﻿@page "/new-bug"
+
 <h3>Add new bug</h3>
 
 <EditForm Model="AddBug">
@@ -13,6 +14,10 @@
 
 @code {
     public Bug AddBug { get; set; } = new Bug();
+    [Inject]
+    public IBugService BugService { get; set; }
 }
+
+
 
 
